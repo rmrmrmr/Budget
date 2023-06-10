@@ -71,4 +71,8 @@ group :test do
   gem "webdrivers"
 end
 
+# Use rubocop linter
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+# Use devise for authentication
+gem 'devise'
