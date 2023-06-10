@@ -76,3 +76,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Use devise for authentication
 gem 'devise'
+
+# Use cancancan for authorization
+gem 'cancancan', '~> 1.9'
