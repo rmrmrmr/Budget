@@ -79,3 +79,5 @@ gem 'devise'
 
 # Use cancancan for authorization
 gem 'cancancan', '~> 1.9'
+
+gem "tailwindcss-rails", "~> 2.0"
