@@ -7,7 +7,7 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     respond_to do |format|
-      format.html { render :new, locals: { group: @group}}
+      format.html { render :new, locals: { group: @group } }
     end
   end
 
@@ -31,5 +31,4 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name, :icon)
   end
-
 end
