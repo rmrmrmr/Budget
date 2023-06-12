@@ -1,0 +1,12 @@
+<section class="max-w-md w-full flex flex-col items-center justify-around pt-10 h-screen">
+  <div class="flex flex-col w-full items-center">
+    <%= image_tag 'railsWalletLogo.png', class: "w-4/6"%>
+    <div class="mb-10 flex flex-col items-center">
+      <h1 class="text-5xl font-black rounded-full text-slate-800 px-4 py-2 italic">Wallet on Rails</h1>
+    </div>
+  </div>
+  <div class="w-full flex flex-col items-center justify-center text-center">
+    <%= link_to "Log in", new_session_path(resource_name), class: "bg-sky-800 text-white text-xl font-bold w-5/6 py-3 rounded-md" %><br />
+    <%= link_to "Sign up", new_registration_path(resource_name), class: "text-black font-bold text-xl w-5/6" %><br />
+  </div>
+</section>
