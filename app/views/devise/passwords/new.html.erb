@@ -2,7 +2,7 @@
   <div class="flex justify-between items-center text-lg font-medium text-white bg-sky-800 w-full py-4 px-4 text-center">
     <%= link_to image_tag('leftArrow.png', alt: "Go back", class: "h-[15px] invert"), :back%>
     <h2>FORGOT YOUR PASSWORD?</h2>
-    <div class="w-[15px]"></div>
+    <%= link_to image_tag('homeIcon.png', alt: "Go back", class: "h-[22px] invert"), unauthenticated_root_path %>
   </div>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>

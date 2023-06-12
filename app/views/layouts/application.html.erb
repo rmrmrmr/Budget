@@ -11,9 +11,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="w-screen min-h-screen flex justify-center bg-slate-400">
+  <body class="w-screen min-h-screen flex flex-col items-center bg-slate-400">
+    <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
   </body>
 </html>
