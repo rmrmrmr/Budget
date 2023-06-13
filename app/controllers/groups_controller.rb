@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.where(user_id: current_user.id)
     @usuario = User.find(current_user.id)
+    @items = Item.select(:amount, :group_id).where(user_id: current_user.id)
   end
 
   def new
@@ -26,7 +27,13 @@ class GroupsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @items = Item.where(group_id: params[:id])
+    @total = 0
+    @items.each do |item|
+      @total += item.amount
+    end
+  end
 
   def group_params
     params.require(:group).permit(:name, :icon)

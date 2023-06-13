@@ -7,14 +7,18 @@
 
   <div class="w-11/12 gap-4 flex flex-col mt-4">
     <% @groups.each do |group| %>
-      <%= link_to group_path(group), class: "flex items-center justify-between w-full bg-white h-[80px] px-5 gap-3" do %>
+      <%= link_to group_path(group), class: "flex items-center justify-between w-full bg-white h-[80px] px-5 gap-3 rounded-sm" do %>
         <%= image_tag group.icon, class: "h-[40px]" %>
         <div class="flex flex-col w-4/6">
           <h2 class="text-xl"><%= group.name %></h2>
           <h2><%= group.updated_at.strftime("%d %b %Y") %></h2>
         </div>
         <div>
-          <p>$12.48</p>
+        <% @amount = 0 %>
+        <% @items.where(group_id: group.id).each do |item| %>
+          <% @amount += item.amount %>
+        <% end %>
+        <h2><%= @amount %></h2>
         </div>
       <% end %>
     <% end %>
