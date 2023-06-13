@@ -13,9 +13,9 @@ class ItemsController < ApplicationController
     respond_to do |format|
       format.html do
         if @item.save
-          redirect_to  group_path(params[:group_id])
+          redirect_to group_path(params[:group_id])
         else
-          flash.now[:error] = "Error: Item could not be saved"
+          flash.now[:error] = 'Error: Item could not be saved'
           render :new, locals: { item: @item }
         end
       end

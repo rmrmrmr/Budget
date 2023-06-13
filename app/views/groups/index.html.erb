@@ -1,6 +1,6 @@
 <section class="max-w-md w-full flex flex-col items-center justify-start h-screen bg-slate-300 text-gray-700">
   <div class="flex justify-between items-center text-lg font-medium text-white bg-sky-800 w-full py-4 px-4 text-center">
-    <%= link_to image_tag('logoutIcon.png', alt: "Go back", class: "h-[22px] invert"), destroy_user_session_path %>
+    <%= link_to image_tag('logoutIcon.png', alt: "Go back", class: "h-[22px] invert"), destroy_user_session_path, data: { turbo_method: :delete } %>
     <h1>CATEGORIES</h1>
     <%= link_to image_tag('newIcon.png', alt: "Go back", class: "h-[22px] invert"), new_group_path %>
   </div>
@@ -18,7 +18,7 @@
         <% @items.where(group_id: group.id).each do |item| %>
           <% @amount += item.amount %>
         <% end %>
-        <h2><%= @amount %></h2>
+        <h2>$<%= @amount %></h2>
         </div>
       <% end %>
     <% end %>
