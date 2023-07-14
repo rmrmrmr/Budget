@@ -52,7 +52,7 @@
 
 - [Live Demo](https://budgetapp-tuy8.onrender.com/)
 
-- [Live Video Link](https://www.loom.com/share/f6f7f96ab686450da129684c3ed080e1)
+- [Live Video Link](https://www.loom.com/share/3473849ac36c4d2b950cea56f7a21527?sid=7e45893e-1ab8-4405-ac94-a66b6b837948)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 > To get a local copy up and running, follow these steps.
