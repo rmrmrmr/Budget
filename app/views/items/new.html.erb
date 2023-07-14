@@ -6,11 +6,11 @@
   </div>
 
   <%= form_with model: @item, url: group_items_path(params[:group_id]), method: :post, local: true, scope: :item do |f| %>
-    <%= f.text_field :name, autofocus: true, placeholder: "Item name", class: "w-[448px] focus:ring-transparent px-5 h-16 border-0 bg-slate-200" %>
-    <%= f.number_field :amount, autofocus: true, placeholder: "Amount", step: 0.5, class: "w-[448px] focus:ring-transparent px-5 h-16 border-0 bg-slate-200" %>
+    <%= f.text_field :name, autofocus: true, placeholder: "Item name", class: "w-[448px] focus:ring-transparent px-5 h-16 border-0 bg-slate-200 itemNameField" %>
+    <%= f.number_field :amount, autofocus: true, placeholder: "Amount", step: 0.5, class: "w-[448px] focus:ring-transparent px-5 h-16 border-0 bg-slate-200 itemAmountField" %>
     
     <div class="w-[448px] flex flex-col justify-center items-center">
-      <%= f.submit "Create Transaction", class: "bg-green-800 text-white text-xl font-bold w-3/6 py-2 rounded-md mt-4" %>
+      <%= f.submit "Create Transaction", class: "bg-green-800 text-white text-xl font-bold w-3/6 py-2 rounded-md mt-4 createItemBtn" %>
     </div>
   <% end %>
 </section>

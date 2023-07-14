@@ -6,24 +6,23 @@
   </div>
 
   <%= form_with model: @group, url: groups_path, method: :post, local: true, scope: :group do |f| %>
-    <%= f.text_field :name, autofocus: true, placeholder: 'Group Name', class: "w-[448px] focus:ring-transparent px-5 h-16 border-0 bg-slate-200"%>
-    <%# <%= f.text_field :icon, autofocus: true, placeholder: 'Icon (Provide an URL)', class: "w-[448px] focus:ring-transparent px-5 h-16 border-0 bg-slate-200"%>
+    <%= f.text_field :name, autofocus: true, placeholder: 'Group Name', class: "w-[448px] focus:ring-transparent px-5 h-16 border-0 bg-slate-200", id: 'groupNameInput'%>
 
     <h2 class="text-xl font-semibold px-5 bg-slate-200 pb-2 pt-4">Choose an icon</h2>
     <div class="flex w-full justify-around bg-slate-200 pb-4">
-      <div class="flex gap-2">
+      <div class="flex gap-2 iconSelect">
         <%= f.radio_button :icon, "oneIcon.svg" %>
         <%= image_tag 'oneIcon.svg', class: 'h-[30px]' %>
       </div>
-          <div class="flex gap-2">
+          <div class="flex gap-2 iconSelect">
         <%= f.radio_button :icon, "twoIcon.svg" %>
         <%= image_tag 'twoIcon.svg', class: 'h-[30px]' %>
       </div>
-          <div class="flex gap-2">
+          <div class="flex gap-2 iconSelect">
         <%= f.radio_button :icon, "threeIcon.svg" %>
         <%= image_tag 'threeIcon.svg', class: 'h-[30px]' %>
       </div>
-          <div class="flex gap-2">
+          <div class="flex gap-2 iconSelect">
         <%= f.radio_button :icon, "fourIcon.svg" %>
         <%= image_tag 'fourIcon.svg', class: 'h-[30px]' %>
       </div>
@@ -31,7 +30,7 @@
 
 
     <div class="w-[448px] flex flex-col justify-center items-center">
-      <%= f.submit "Create Group", class: "bg-green-800 text-white text-xl font-bold w-3/6 py-2 rounded-md mt-4" %>
+      <%= f.submit "Create Group", class: "bg-green-800 text-white text-xl font-bold w-3/6 py-2 rounded-md mt-4 createGroupBtn" %>
     </div>
   <% end %>
 </section>

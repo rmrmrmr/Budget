@@ -1,13 +1,13 @@
 <section class="max-w-md w-full flex flex-col items-center justify-start h-screen bg-slate-300 text-gray-700">
   <div class="flex justify-between items-center text-lg font-medium text-white bg-sky-800 w-full py-4 px-4 text-center">
-    <%= link_to image_tag('logoutIcon.png', alt: "Go back", class: "h-[22px] invert"), destroy_user_session_path, data: { turbo_method: :delete } %>
+    <%= link_to image_tag('logoutIcon.png', alt: "Go back", class: "h-[22px] invert"), destroy_user_session_path, data: { turbo_method: :delete }, id: 'logoutBtn' %>
     <h1>CATEGORIES</h1>
-    <%= link_to image_tag('newIcon.png', alt: "Go back", class: "h-[22px] invert"), new_group_path %>
+    <%= link_to image_tag('newIcon.png', alt: "Go back", class: "h-[22px] invert", id: 'newGroupBtn'), new_group_path %>
   </div>
 
   <div class="w-11/12 gap-4 flex flex-col mt-4">
     <% @groups.each do |group| %>
-      <%= link_to group_path(group), class: "flex items-center justify-between w-full bg-white h-[80px] px-5 gap-3 rounded-sm" do %>
+      <%= link_to group_path(group), class: "flex items-center justify-between w-full bg-white h-[80px] px-5 gap-3 rounded-sm grouP" do %>
         <%= image_tag group.icon, class: "h-[40px]" %>
         <div class="flex flex-col w-4/6">
           <h2 class="text-xl"><%= group.name %></h2>
