@@ -12,7 +12,7 @@ RSpec.describe User, type: :model do
 
   it 'validates presence of email' do
     subject.email = nil
-    expect(subject).to_not be_valid  
+    expect(subject).to_not be_valid
   end
 
   it 'tests the admin method when role is set to admin' do
