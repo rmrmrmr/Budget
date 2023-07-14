@@ -1,0 +1,22 @@
+<section class="max-w-md w-full flex flex-col items-center justify-start h-screen bg-slate-300 text-gray-700">
+  <div class="flex justify-between items-center text-lg font-medium text-white bg-sky-800 w-full py-4 px-4 text-center">
+    <%= link_to image_tag('homeIcon.png', alt: "Go back", class: "h-[22px] invert"), authenticated_root_path %>
+    <h1>TRANSACTIONS</h1>
+    <%= link_to image_tag('newIcon.png', alt: "Go back", class: "h-[22px] invert"), new_group_item_path(params[:id]) %>
+  </div>
+
+  <div class="w-11/12 gap-4 flex flex-col mt-4">
+    <% @items.each do |item| %>
+      <div class="flex items-center justify-start w-full bg-white h-[80px] px-5 gap-3 rounded-sm">
+        <%= image_tag 'coinIcon.svg', class: 'h-[30px]' %>
+        <h2 class="font-semibold text-lg"><%= item.name %></h2>
+        <h3 class="ml-auto font-medium">$<%= item.amount %></h3>
+      </div>
+    <% end %>
+    <div class="flex items-center justify-start w-full bg-white h-[80px] px-5 gap-3 rounded-sm">
+      <%= image_tag 'billIcon.svg', class: 'h-[30px]' %>
+      <h2 class="font-semibold text-lg">TOTAL</h2>
+      <h3 class="ml-auto font-medium">$<%= @total %></h3>
+    </div>
+  </div>
+</section>
